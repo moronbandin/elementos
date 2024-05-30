@@ -1,0 +1,62 @@
+[
+    {
+        "obx1": {
+            "criterios": ["ca1.1", "ca1.2", "ca1.3", "ca1.4"],
+            "descriptores": ["ccl1", "ccl5", "cp2", "cp3", "cc1", "cc2", "ccec1", "ccec3"]
+        }
+    },
+    {
+        "obx2": {
+            "criterios": ["ca2.1"],
+            "descriptores": ["ccl2", "cp2", "stem1", "cd2", "cd3", "cpsaa4", "cc3"]
+        }
+    },
+    {
+        "obx3": {
+            "criterios": ["ca2.2", "ca2.3"],
+            "descriptores": ["ccl1", "ccl3", "ccl5", "cp2", "stem1", "cd2", "cd3", "cc2", "ce1"]
+        }
+    },
+    {
+        "obx4": {
+            "criterios": ["ca2.4", "ca3.1", "ca3.2"],
+            "descriptores": ["ccl2", "ccl3", "ccl5", "cp2", "stem4", "cd1", "cpsaa4", "cc3"]
+        }
+    },
+    {
+        "obx5": {
+            "criterios": ["ca2.5", "ca4.1"],
+            "descriptores": ["ccl1", "ccl3", "ccl5", "stem1", "cd2", "cd3", "cpsaa5", "cc2"]
+        }
+    },
+    {
+        "obx6": {
+            "criterios": ["ca1.5", "ca2.6", "ca2.7"],
+            "descriptores": ["ccl3", "cd1", "cd2", "cd3", "cd4", "cpsaa4", "cc2", "ce3"]
+        }
+    },
+    {
+        "obx7": {
+            "criterios": ["ca3.3", "ca3.4"],
+            "descriptores": ["ccl1", "ccl4", "cd3", "cpsaa1", "ccec1", "ccec2", "ccec3"]
+        }
+    },
+    {
+        "obx8": {
+            "criterios": ["ca3.5", "ca3.6", "ca3.7"],
+            "descriptores": ["ccl1", "ccl4", "cc1", "ccec1", "ccec2", "ccec3", "ccec4"]
+        }
+    },
+    {
+        "obx9": {
+            "criterios": ["ca2.8", "ca4.2", "ca4.3", "ca4.4"],
+            "descriptores": ["ccl1", "ccl2", "cp2", "stem1", "stem2", "cpsaa5"]
+        }
+    },
+    {
+        "obx10": {
+            "criterios": ["ca2.9", "ca2.10"],
+            "descriptores": ["ccl1", "ccl5", "cp3", "cd3", "cpsaa3", "cc1", "cc2", "cc3"]
+        }
+    }
+]
