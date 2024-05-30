@@ -26,7 +26,7 @@ criterios = sorted(set(criterios), key=lambda x: (int(x[2]), int(x[4:])))
 st.title("Selección de Criterios de Avaliación e Obxectivos Relacionados")
 
 # Generar lista de criterios con descripciones
-criterios_con_descripcion = [f"{criterio.upper()} - {descriptions_dict.get(criterio.upper(), 'Descrición non dispoñible')}" for criterio in criterios]
+criterios_con_descripcion = [f"{criterio.upper()} - {descriptions_dict.get(criterio.upper(), 'DESCRICIÓN NON DISPOÑIBLE')}" for criterio in criterios]
 
 # Selección de criterios de evaluación
 selected_criterios = st.multiselect("Selecciona os criterios de avaliación da túa unidade", criterios_con_descripcion)
@@ -43,16 +43,16 @@ for item in relations:
             if criterio in selected_criterios_codes:
                 criterios_dict.setdefault(criterio, {'descriptores': [], 'objetivos': []})
                 criterios_dict[criterio]['descriptores'].extend(data['descriptores'])
-                criterios_dict[criterio]['objetivos'].append(objetivo)
-                objetivos_relacionados.add(objetivo)
+                criterios_dict[criterio]['objetivos'].append(objetivo.upper())
+                objetivos_relacionados.add(objetivo.upper())
 
 # Presentar la estructura de datos en una tabla
 if selected_criterios:
     st.write("### Estrutura de datos")
     data = []
     for criterio, info in criterios_dict.items():
-        descriptores = ", ".join(set(info['descriptores']))
-        descripcion = descriptions_dict.get(criterio.upper(), "Descrición non dispoñible")
+        descriptores = ", ".join(set(info['descriptores'])).upper()
+        descripcion = descriptions_dict.get(criterio.upper(), "DESCRICIÓN NON DISPOÑIBLE")
         data.append([criterio.upper(), descripcion, descriptores])
 
     df = pd.DataFrame(data, columns=["Criterio", "Descrición", "Descritores"])
