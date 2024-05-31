@@ -23,7 +23,7 @@ for item in relations:
 criterios = sorted(set(criterios), key=lambda x: (int(x[2]), int(x[4:])))
 
 # Interfaz de usuario
-st.title("Selección de Criterios de Avaliación e Obxectivos Relacionados")
+st.title("Elementos curriculuaress")
 
 # Generar lista de criterios con descripciones
 criterios_con_descripcion = [f"{criterio.upper()} - {descriptions_dict.get(criterio.upper(), 'DESCRICIÓN NON DISPOÑIBLE')}" for criterio in criterios]
@@ -48,7 +48,7 @@ for item in relations:
 
 # Presentar la estructura de datos en una tabla Markdown
 if selected_criterios:
-    st.write("### Estrutura de datos")
+    st.write("### Aqui tens, Íria:")
     
     # Crear tabla en formato Markdown
     table_md = "| Criterio | Descrición | Descritores |\n"
