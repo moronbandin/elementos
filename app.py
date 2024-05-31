@@ -23,7 +23,7 @@ for item in relations:
 criterios = sorted(set(criterios), key=lambda x: (int(x[2]), int(x[4:])))
 
 # Interfaz de usuario
-st.title("Elementos curriculuaress")
+st.title("Elementos curriculares")
 
 # Generar lista de criterios con descripciones
 criterios_con_descripcion = [f"{criterio.upper()} - {descriptions_dict.get(criterio.upper(), 'DESCRICIÓN NON DISPOÑIBLE')}" for criterio in criterios]
