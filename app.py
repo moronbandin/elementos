@@ -46,17 +46,19 @@ for item in relations:
                 criterios_dict[criterio]['objetivos'].append(objetivo.upper())
                 objetivos_relacionados.add(objetivo.upper())
 
-# Presentar la estructura de datos en una tabla
+# Presentar la estructura de datos en una tabla Markdown
 if selected_criterios:
     st.write("### Estrutura de datos")
-    data = []
+    
+    # Crear tabla en formato Markdown
+    table_md = "| Criterio | Descrición | Descritores |\n"
+    table_md += "| --- | --- | --- |\n"
     for criterio, info in criterios_dict.items():
         descriptores = ", ".join(set(info['descriptores'])).upper()
         descripcion = descriptions_dict.get(criterio.upper(), "DESCRICIÓN NON DISPOÑIBLE")
-        data.append([criterio.upper(), descripcion, descriptores])
+        table_md += f"| {criterio.upper()} | {descripcion} | {descriptores} |\n"
 
-    df = pd.DataFrame(data, columns=["Criterio", "Descrición", "Descritores"])
-    st.dataframe(df)
+    st.markdown(table_md)
 
     # Imprimir objetivos relacionados
     st.write("### Obxectivos relacionados")
